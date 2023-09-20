@@ -1,0 +1,67 @@
+<style>
+  .navbar{
+    box-shadow: 0px 2px 2px rgb(168, 202, 200);
+  }
+  .navbar-brand {
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+  }
+  .navbar-brand:hover {
+  background-color: rgb(39, 133, 133);
+  box-shadow: 2px 5px 5px rgba(14, 41, 65, 0.721);
+  color: aliceblue;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+  .nav a{
+    color: aliceblue !important;
+  }
+  .nav a:hover{
+    background-color: rgb(39, 133, 133);
+    border-radius: 25px;
+  }
+  .btn:hover{
+    background-color: rgb(39, 133, 133);
+    color: aliceblue;
+    border: none !important;
+    border-radius: 25px;
+    box-shadow: 2px rgb(0, 136, 163);
+  }
+</style>
+<header>
+  <nav class="navbar navbar-expand-lg" style="background-color:rgb(97, 156, 180);font-family: 'Roboto Slab', serif;">
+    <div class="container-fluid">
+      <a class="navbar-brand h1" href="/dashboard" style="text-decoration: none;"><i class="fa-solid fa-code"></i> Placement Cell</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-around " id="navbarSupportedContent">
+        <% if (locals.user) {%>
+
+        <ul class="nav">
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" aria-current="page" href="/student/add-student">Add new Student</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="/interview/add-interview">Add an Interview</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="/download">Download Report</a>
+          </li>
+        </ul>
+
+        <form>
+          <a class="btn mx-2" style="color: azure; border: 1px solid white;" href="/profile">
+            <i class="fa-regular fa-user"></i>
+            <%= user.username %></a>
+          <a class="btn mx-2" style="color: azure; border: 1px solid white;" href="/sign-out">Sign Out</a>
+        </form>
+
+        <%} %>
+      </div>
+    </div>
+  </nav>
+</header>

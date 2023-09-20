@@ -1,0 +1,42 @@
+<style>
+  .container{
+    background-color: rgb(211, 211, 211);
+    border-radius: 20px 0px 20px 0px;
+    box-shadow: 10px 10px 10px rgba(162, 195, 212, 0.842);
+  }
+  h1{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    text-align: center;
+  }
+  .btn{
+    transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in;
+  }
+  .btn:hover{
+    background-color: rgb(0, 108, 148);
+    box-shadow: 8px 8px 5px rgba(0, 37, 50, 0.758);
+  }
+  
+</style>
+<div class="container mt-5 col-md-5">
+  <h1>Sign In</h1>
+  <form method="POST" action="/create-session" class="mt-2 p-3" style="--bs-border-opacity: 0.5;">
+    <div class="mb-2">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" />
+      <div id="emailHelp" class="form-text">
+        We'll never share your email with anyone else.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" name="password" />
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary" style="padding-left: 30px;padding-right: 30px;">Log In</button>
+    </div>
+  </form>
+
+  <p class="mt-2 pb-3"><a href="/sign-up">Create an account</a></p>
+</div>
