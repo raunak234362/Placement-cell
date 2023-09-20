@@ -2,6 +2,8 @@
 
 <p id="description">The Placement Cell Web Application is a user-friendly platform designed for managing student interviews and facilitating the allocation of students to company interviews. It is built using Node.js Express.js MongoDB EJS and JavaScript.</p>
 
+<h2>Hosted Link:-<a></a></h2>
+
 <h2>Project Screenshots:</h2>
 
 <img src="https://github.com/raunak234362/Placement-cell/assets/64278503/8cb53697-7e07-4010-ae80-feb386841bfd" alt="project-screenshot" width="400" height="400/">
