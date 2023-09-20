@@ -7,7 +7,7 @@ module.exports.downloadCSVReport = async function (req, res) {
     const allStudents = await Student.find({});
     let report =
       "student Id, Student name,Student college, Student email, Student status, DSA Final Score, WebD Final Score, React Final Score, Interview date, Interview company, Interview result";
-    let studentData1 = "";
+    let studentData1 = " ";
 
     for (let student of allStudents) {
       studentData1 =
@@ -47,9 +47,9 @@ module.exports.downloadCSVReport = async function (req, res) {
       function (err, data) {
         if (err) {
           console.log(err);
-          return res.redirct("back");
+          return res.redirect("back");
         }
-        req.flash("success", "successfully downloaded CSV report!");
+        req.flash("success", "Successfully downloaded CSV report!");
         return res.download("uploads/studentsReport.csv");
       }
     );
