@@ -102,7 +102,6 @@ module.exports.destroy = async (req, res) => {
 
 
 // update student details
-// update student details
 module.exports.update = async (req, res) => {
   try {
     const student = await Student.findById(req.params.id);

@@ -1,10 +1,14 @@
+// Importing required modules and models
 const Student = require("../models/student");
 const fs = require("fs");
 const path = require("path");
 
+// Defining a function to handle CSV report download
 module.exports.downloadCSVReport = async function (req, res) {
   try {
+     // Fetch all students from the database
     const allStudents = await Student.find({});
+    // Defining the initial header row for the CSV report
     let report =
       "student Id, Student name,Student college, Student email, Student status, DSA Final Score, WebD Final Score, React Final Score, Interview date, Interview company, Interview result";
     let studentData1 = " ";
@@ -41,6 +45,8 @@ module.exports.downloadCSVReport = async function (req, res) {
       }
     }
 
+    
+    // Writing the report to a CSV file
     const csvFile = fs.writeFile(
       "uploads/studentsReport.csv",
       report,
